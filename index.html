@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List with Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div>
+        <h1>Experimental To-Do — Personal Tasks</h1>
+      </div>
+      <div class="auth" id="authArea">
+        <button class="btn" id="btnShowAuth">Login / Register</button>
+      </div>
+    </header>
+
+    <div class="main" id="appArea" hidden>
+      <!-- LEFT PANEL -->
+      <aside class="panel">
+        <h2>Create Task</h2>
+        <p class="small">Add tasks to your list. Stored locally for each account.</p>
+
+        <form id="taskForm" onsubmit="return false;">
+          <label for="taskTitle">Task title</label>
+          <input id="taskTitle" type="text" placeholder="e.g., Read chapter 4" required />
+
+          <label for="taskNotes">Notes (optional)</label>
+          <input id="taskNotes" type="text" placeholder="Short notes" />
+
+          <div class="task-input">
+            <input id="taskAddInput" type="text" placeholder="Quick add task..." />
+            <button class="btn" id="addBtn">Add</button>
+          </div>
+        </form>
+
+        <div class="filter">
+          <button class="pill" data-filter="all">All</button>
+          <button class="pill" data-filter="active">Active</button>
+          <button class="pill" data-filter="completed">Completed</button>
+        </div>
+
+        <input class="search" id="search" placeholder="Search tasks..." />
+        <p class="small">Signed in as: <strong id="userBadge"></strong></p>
+        <button class="btn ghost" id="logoutBtn">Logout</button>
+      </aside>
+
+      <!-- RIGHT PANEL -->
+      <main>
+        <div class="topbar">
+          <h2>Your Tasks</h2>
+          <p class="small">Manage and track progress easily.</p>
+        </div>
+
+        <div class="task-list" id="tasksContainer">
+          <div class="empty" id="emptyNote">No tasks yet — add one on the left.</div>
+        </div>
+
+        <footer>
+          <p class="small">Data stored locally per account (localStorage)</p>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

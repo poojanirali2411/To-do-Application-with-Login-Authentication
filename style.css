@@ -1,0 +1,177 @@
+:root {
+  --bg: #f7fbff;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --danger: #ef4444;
+  --success: #059669;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #eef6ff 0%, var(--bg) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0;
+  color: #0f172a;
+}
+
+.sub {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.auth {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  color: var(--accent);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 18px;
+}
+
+.panel {
+  background: rgba(37, 99, 235, 0.04);
+  padding: 14px;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #e6eefc;
+}
+
+.task-input {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.filter {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.pill {
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.search {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #e6eefc;
+  margin-top: 10px;
+}
+
+.task-list {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.title {
+  flex: 1;
+  font-size: 15px;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.controls button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 20px;
+}
+
+.small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 10px;
+}
