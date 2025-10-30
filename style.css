@@ -33,6 +33,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -50,6 +51,7 @@ h1 {
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-top: 10px;
 }
 
 .btn {
@@ -105,6 +107,7 @@ input[type="password"] {
   display: flex;
   gap: 8px;
   margin: 10px 0;
+  flex-wrap: wrap;
 }
 
 .pill {
@@ -138,11 +141,14 @@ input[type="password"] {
   border: 1px solid rgba(15, 23, 42, 0.05);
   border-radius: 8px;
   margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .title {
   flex: 1;
   font-size: 15px;
+  word-break: break-word;
 }
 
 .meta {
@@ -175,3 +181,34 @@ footer {
   font-size: 13px;
   margin-top: 10px;
 }
+
+/* === Responsiveness === */
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .panel, main {
+    padding: 10px;
+  }
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
